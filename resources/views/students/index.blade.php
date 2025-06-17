@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Student Management</title>
+    <title>Student List</title>
 </head>
 <body>
     <h1>Student List</h1>
+    <a href="{{ route('students.create') }}">➕ Add Student</a>
+
+    @if(session('success'))
+        <p style="color: green">{{ session('success') }}</p>
+    @endif
 
     <table border="1" cellpadding="10">
         <tr>
